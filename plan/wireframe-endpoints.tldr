@@ -66,9 +66,9 @@
     {
       "id": "pointer:pointer",
       "typeName": "pointer",
-      "x": 24.843704223632812,
-      "y": -5.317718505859375,
-      "lastActivityTimestamp": 1693827399121,
+      "x": 1312.782825201788,
+      "y": 651.3880074091574,
+      "lastActivityTimestamp": 1693834087976,
       "meta": {}
     },
     {
@@ -79,9 +79,9 @@
       "typeName": "page"
     },
     {
-      "x": 44.6614990234375,
-      "y": 50.825531005859375,
-      "z": 1,
+      "x": 130.55942301415928,
+      "y": 196.7925718240916,
+      "z": 0.45451148250587997,
       "meta": {},
       "id": "camera:page:9mK0DZGJLBoQRn71BcoYM",
       "typeName": "camera"
@@ -106,7 +106,7 @@
         "tldraw:geo": "rectangle",
         "tldraw:size": "s",
         "tldraw:fill": "none",
-        "tldraw:color": "black"
+        "tldraw:color": "grey"
       },
       "brush": null,
       "scribble": null,
@@ -122,7 +122,7 @@
       "screenBounds": {
         "x": 0,
         "y": 0,
-        "w": 1381.6666259765625,
+        "w": 690.8333129882812,
         "h": 470
       },
       "zoomBrush": null,
@@ -133,7 +133,7 @@
       "highlightedUserIds": [],
       "meta": {},
       "id": "instance:instance",
-      "currentPageId": "page:D_cmtYD59Oa-ksYgKMuJI",
+      "currentPageId": "page:9mK0DZGJLBoQRn71BcoYM",
       "typeName": "instance"
     },
     {
@@ -260,9 +260,9 @@
       "typeName": "page"
     },
     {
-      "x": 1365.2261784088928,
-      "y": 248.50532813332114,
-      "z": 0.3997834221553951,
+      "x": 1756.1616000556342,
+      "y": 301.1377581570639,
+      "z": 0.3672379184665238,
       "meta": {},
       "id": "camera:page:D_cmtYD59Oa-ksYgKMuJI",
       "typeName": "camera"
@@ -5509,7 +5509,6 @@
       "isLocked": false,
       "opacity": 1,
       "meta": {},
-      "id": "shape:2L6qyuADNQ-LQOjJGYIqv",
       "type": "arrow",
       "parentId": "page:D_cmtYD59Oa-ksYgKMuJI",
       "index": "b0P",
@@ -5535,6 +5534,7 @@
         "text": "",
         "font": "draw"
       },
+      "id": "shape:2L6qyuADNQ-LQOjJGYIqv",
       "typeName": "shape"
     }
   ]

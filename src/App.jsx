@@ -1,4 +1,7 @@
 import { useState } from 'react'
+import {Route, Routes} from 'react-router-dom'
+import Home from './components/home'
+import Header from "./components/header"
 
 import './App.css'
 
@@ -6,23 +9,9 @@ function App() {
   return (
     <div>
   <Header />
-  <NavBar />
-  <Home />
-  <Login />
-  <Topics />
-  <ArticlesContainer>
-    <ArticleList>
-      <Article />
-      <Article />
-      <Article />
-      <Article />
-      <Article />
-      <Article />
-      <Article />
-      <Article />
-    </ArticleList>
-  </ArticlesContainer>
-  <Footer />
+  <Routes>
+  <Route path="/" element={<Home />}/>
+  </Routes>
     </div>
   )
 }
