@@ -1,8 +1,51 @@
+*{
+    font-family: 'Work Sans', sans-serif;;
+}
 Header{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: 40vh;
     font-size: x-large;
 }
+
+.navbar{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+    background-color: cornflowerblue;
+    list-style: none;
+    text-decoration: none;
+    font-family: monospace;
+    color:cornsilk;
+    font-size: 13px
+}
+
+.navbar li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    list-style: none;
+  }
+
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: cornflowerblue;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content.show {
+    display: block;
+  }
