@@ -1,19 +1,17 @@
 import React, { useEffect } from 'react';
 import ArticleCard from './article-card'
-import axios from 'axios';
+import getArticles from '../Api';
 
-const ArticleContainer = ({articles, setArticles}) => {
 
+const ArticleContainer = ({ articles, setArticles }) => {
   useEffect(() => {
-    axios
-      .get(`https://taryns-news.onrender.com/api/articles`)
-      .then(( {data} ) => {
-        setArticles(data.articles);
-      })
+    getArticles().then((articles) => {
+      setArticles(articles);
+    });
   }, []);
 
   return (
-    <div >
+    <div>
       <ul className='article-grid'>
         <ArticleCard articles={articles} setArticles={setArticles} />
       </ul>
