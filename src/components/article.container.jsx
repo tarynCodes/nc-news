@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import ArticleCard from './article-card'
-import getArticles from '../Api';
+import { getArticles } from '../Api';
 
 
 const ArticleContainer = ({ articles, setArticles }) => {

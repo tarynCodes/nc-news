@@ -11,8 +11,8 @@ header{
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    height: 30vh;
-    font-size: 35px;
+    height: 15vh;
+    font-size: 30px;
     background-color:#335C67;
     color:#FFF3B0;
 }
@@ -95,6 +95,45 @@ header{
     padding: 0px;
   }
 
+  .single-Article-page{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    margin: 50px;
+    padding:1%;
+    background-colour: #FFF3B0;
+    border-style: dashed;
+    border-color: #9E2A2B;
+  }
+#article-heading{
+  text-align: center;
+  padding-top: 0%;
+  padding-bottom: 2%;
+  font-size: 28px;
+  color:#9E2A2B
+}
+
+ #article-author{
+  text-align: center;
+  padding-bottom: 2%;
+  color:#9E2A2B
+ }
+
+#article-image{
+ width:38%;
+ height:38%;
+ margin-left:auto;
+ margin-right:auto;
+}
+
+#article-body{
+  text-align: center;
+  margin-top: 2%;
+  margin-right: 20%;
+  margin-left: 20%;
+  font-size: 20px;
+  color:#9E2A2B
+}
  
 
   @media (max-width: 840px) {
