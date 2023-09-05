@@ -5,6 +5,7 @@ import Header from "./components/header"
 import NavBar from './components/NavBar'
 import './App.css'
 import ArticleContainer from './components/article.container'
+import ArticlePage from './components/article-page'
 
 
 function App() {
@@ -13,9 +14,9 @@ function App() {
     <div>
   <NavBar/>
   <Header />
-  <ArticleContainer articles={articles} setArticles={setArticles}/>
   <Routes>
-  <Route path="/" element={<Home />}/>
+  <Route path="/" element={<ArticleContainer articles={articles} setArticles={setArticles}/>}/>
+  <Route path="/article/:id" element={<ArticlePage articles={articles} setArticles={setArticles}/>} />
   </Routes>
     </div>
   )

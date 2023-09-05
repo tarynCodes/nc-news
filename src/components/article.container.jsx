@@ -1,19 +1,21 @@
-import React, { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import ArticleCard from './article-card'
-import axios from 'axios';
+import { getArticles } from '../Api';
 
-const ArticleContainer = ({articles, setArticles}) => {
 
+const ArticleContainer = ({ articles, setArticles }) => {
+  const [isLoading, setIsLoading] = useState(true)
   useEffect(() => {
-    axios
-      .get(`https://taryns-news.onrender.com/api/articles`)
-      .then(( {data} ) => {
-        setArticles(data.articles);
-      })
+    getArticles().then((articles) => {
+      setArticles(articles);
+      setIsLoading(false)
+    });
   }, []);
 
+  if (isLoading) return <p>Loading...</p>
+
   return (
-    <div >
+    <div>
       <ul className='article-grid'>
         <ArticleCard articles={articles} setArticles={setArticles} />
       </ul>
