@@ -6,6 +6,8 @@ import CommentCard from './comment-card';
 const CommentContainer= () => {
     const [isLoading, setIsLoading] = useState(true)
     const [comments, setComments] = useState([])
+    const [postComment, setPostComment] = useState({
+    })
     const id = useParams()
 
     useEffect(() => {
