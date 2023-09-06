@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom'
 
 const ArticleCard = ({ articles }) => {
   const articleList = articles.map((article) => (
-    <li key={article.id} className="article-card">
+    <li key={`article${article.id}`} className="article-card">
       <Link to={`/article/${article.article_id}`}>
       <img src={article.article_img_url} alt={article.title} />
       <div className="article-details">
@@ -14,7 +14,7 @@ const ArticleCard = ({ articles }) => {
     </li>
   ));
 
-  return <ul key={articleList} className="article-list">{articleList}</ul>;
+  return <ul className="article-list">{articleList}</ul>;
 };
 
 export default ArticleCard; 

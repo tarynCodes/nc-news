@@ -8,6 +8,7 @@ import ArticleContainer from './components/article.container'
 import ArticlePage from './components/article-page'
 
 
+
 function App() {
   const[articles, setArticles] = useState([])
   return (
@@ -16,7 +17,7 @@ function App() {
   <Header />
   <Routes>
   <Route path="/" element={<ArticleContainer articles={articles} setArticles={setArticles}/>}/>
-  <Route path="/article/:id" element={<ArticlePage articles={articles} setArticles={setArticles}/>} />
+  <Route path="/article/:id" element= {<ArticlePage articles={articles} setArticles={setArticles}/>}/>
   </Routes>
     </div>
   )

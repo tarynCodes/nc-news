@@ -18,5 +18,16 @@ const retriveIndividualArticles = ({id}) => {
         console.log(err)
     })
 }
-export {getArticles, retriveIndividualArticles};
+
+const getComments = ({id}) => {
+    return axios
+    .get(`https://taryns-news.onrender.com/api/articles/${id}/comments`)
+    .then((response) => {
+        return response.data.comments
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+}
+export {getArticles, retriveIndividualArticles, getComments};
 
