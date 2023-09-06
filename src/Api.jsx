@@ -32,13 +32,7 @@ const getComments = ({id}) => {
 
 const patchVotes = ({id}, vote) => {
     return axios
-     .patch(`https://taryns-news.onrender.com/api/articles/${id}`, [{ inc_votes: vote }])
-     .then((response) => {
-        console.log(response.data)
-     })
-     .catch((err) => {
-        console.log(err)
-     })
+     .patch(`https://taryns-news.onrender.com/api/articles/${id}`, { inc_votes: vote })
 
 }
 
