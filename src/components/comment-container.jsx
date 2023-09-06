@@ -17,7 +17,7 @@ const CommentContainer= () => {
 
     if(isLoading) return <p>Loading...</p>
     
-    return(
+    if (comments) return(
         <div>
             <ul className='comment-grid'>
                 <CommentCard comments={comments} setComments={setComments}/>

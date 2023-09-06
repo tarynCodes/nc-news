@@ -1,5 +1,5 @@
 const CommentCard = ({comments}) => {
-    console.log(comments)
+    if(comments.length === 0) return <p>No comments yet!</p>
     const commentList = comments.map((comment) => (
         <li key={comment.id} className="comment-card">
             <h3>{comment.author}comment author</h3>

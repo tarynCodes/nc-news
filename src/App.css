@@ -11,10 +11,11 @@ header{
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    height: 15vh;
+    height: 18vh;
     font-size: 30px;
     background-color:#335C67;
     color:#FFF3B0;
+
 }
 
 .navbar{
