@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom'
 import { getComments} from '../Api'
+import CommentCard from './comment-card';
 
 const CommentContainer= () => {
     const [isLoading, setIsLoading] = useState(true)
@@ -18,9 +19,8 @@ const CommentContainer= () => {
     
     return(
         <div>
-            <ul>
-                map here for comments. - create a comment-card
-               im a list of comments
+            <ul className='comment-grid'>
+                <CommentCard comments={comments} setComments={setComments}/>
             </ul>
         </div>
     )
