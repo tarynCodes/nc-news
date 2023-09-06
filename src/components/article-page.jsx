@@ -3,8 +3,6 @@ import { retriveIndividualArticles, patchVotes } from '../Api'
 import {useParams} from 'react-router-dom'
 import CommentContainer from './comment-container'
 
-
-
 const ArticlePage = ({comments, setComments}) => {
     const [isLoading, setIsLoading] = useState(true)
     const [singleArticle, setSingleArticle] = useState()
