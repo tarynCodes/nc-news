@@ -29,5 +29,12 @@ const getComments = ({id}) => {
         console.log(err)
     })
 }
-export {getArticles, retriveIndividualArticles, getComments};
+
+const patchVotes = ({id}, vote) => {
+    return axios
+     .patch(`https://taryns-news.onrender.com/api/articles/${id}`, { inc_votes: vote })
+
+}
+
+export {getArticles, retriveIndividualArticles, getComments, patchVotes};
 
