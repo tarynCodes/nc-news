@@ -11,7 +11,7 @@ header{
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    height: 18vh;
+    height: 25vh;
     font-size: 30px;
     background-color:#335C67;
     color:#FFF3B0;
@@ -181,6 +181,15 @@ span {
   height: 50px;
   border-radius: 2%;
   margin-left:3%
+}
+
+.login{
+  font-size: 15px;
+  margin-top: 6%;
+  padding-top: 1%;
+  color:#9E2A2B;
+  font-weight:bold;
+  border-style: solid;
 }
 
   @media (max-width: 840px) {
