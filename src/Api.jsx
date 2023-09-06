@@ -46,7 +46,7 @@ const getUsers = () => {
     return axios
     .get(`https://taryns-news.onrender.com/api/users`)
     .then((response) => {
-        return response.data
+        return response.data.users
     }).catch((err) => {
         console.log(err)
     })

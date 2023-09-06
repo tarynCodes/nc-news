@@ -6,6 +6,7 @@ import NavBar from './components/NavBar'
 import './App.css'
 import ArticleContainer from './components/article.container'
 import ArticlePage from './components/article-page'
+import Users from './components/users'
 
 
 
@@ -18,6 +19,7 @@ function App() {
   <Routes>
   <Route path="/" element={<ArticleContainer articles={articles} setArticles={setArticles}/>}/>
   <Route path="/article/:id" element= {<ArticlePage articles={articles} setArticles={setArticles}/>}/>
+  <Route path= "/users" element= {<Users/>}/>
   </Routes>
     </div>
   )
