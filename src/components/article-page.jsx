@@ -25,6 +25,7 @@ const ArticlePage = ({comments, setComments}) => {
         <h2 id="article-author">{singleArticle.article.author}</h2>
         <img id= "article-image" src={singleArticle.article.article_img_url}/>
         <p id="article-body">{singleArticle.article.body}</p>
+        <button type={singleArticle.article.votes}> <span>&#128420;  </span>{singleArticle.article.votes}</button>
        </article>
         <ul>
        <CommentContainer comments={comments} setComments={setComments}/>

@@ -10,6 +10,9 @@ const ArticleCard = ({ articles }) => {
         <p>Author: {article.author}</p>
         <p>Topic: {article.topic}</p>
       </div>
+      <div>
+        
+      </div>
       </Link>
     </li>
   ));
