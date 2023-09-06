@@ -42,5 +42,15 @@ const postComment = (comment) => {
     
 }
 
-export {getArticles, retriveIndividualArticles, getComments, patchVotes, postComment};
+const getUsers = () => {
+    return axios
+    .get(`https://taryns-news.onrender.com/api/users`)
+    .then((response) => {
+        return response.data
+    }).catch((err) => {
+        console.log(err)
+    })
+}
+
+export {getArticles, retriveIndividualArticles, getComments, patchVotes, postComment, getUsers};
 
