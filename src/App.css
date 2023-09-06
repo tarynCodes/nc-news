@@ -137,6 +137,30 @@ header{
   color:#9E2A2B
 }
  
+.comment-grid{
+  display:flex;
+  flex-wrap:wrap;
+  max-height:20vh;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left:15%;
+  margin-right:15%;
+  overflow-y: scroll;
+  border-style:solid;
+  border-color: black;
+}
+
+.comment-card {
+  text-align:left;
+  justify-content: center;
+  height: 5%;
+  margin: 1%;
+  padding:5%;
+  background-color: #ffff;
+  border-color:#9E2A2B;
+  border-style: dashed
+  
+}
 
   @media (max-width: 840px) {
     .article-card {
