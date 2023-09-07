@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import {UserContext} from "../context/user-context"
+
 
 const NavBar = () => {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
-
+    const { user } = useContext(UserContext);
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
   }
@@ -24,7 +26,9 @@ const NavBar = () => {
       </li>
         <li>
           <Link to="/users">Users</Link>
+          
         </li>
+        <li><h5 className="login">Logged in as {user}</h5></li>
       </ul>
   );
 };
