@@ -36,9 +36,9 @@ const patchVotes = ({id}, vote) => {
 
 }
 
-const postComment = (comment) => {
+const postNewComment = ( {id}, body, user ) => {
     return axios 
-    .post(`https://taryns-news.onrender.com/api/articles/${id}/comments`, {comment})
+    .post(`https://taryns-news.onrender.com/api/articles/${id}/comments`, { body: body, username: user, article_id: id})
     
 }
 
@@ -52,5 +52,5 @@ const getUsers = () => {
     })
 }
 
-export {getArticles, retriveIndividualArticles, getComments, patchVotes, postComment, getUsers};
+export {getArticles, retriveIndividualArticles, getComments, patchVotes, postNewComment, getUsers};
 
