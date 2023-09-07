@@ -10,27 +10,32 @@ const CommentContainer= () => {
     const [isLoading, setIsLoading] = useState(true)
     const [comments, setComments] = useState([])
     const [postComment, setPostComment] = useState({})
+    const [err, setErr] = useState (null)
     const id = useParams()
 
     const handleInput = (event) => {
-        console.log(event.target.value)
         setPostComment(event.target.value)
     }
 
-    const handleSubmit = ((event) => {
+    const handleSubmit = (event) => {
         event.preventDefault()
-        postNewComment(id, postComment, user)
+        postNewComment(id, postComment, user).then((newComment) => {
+            setComments((currComments) => {
+            return [...currComments, newComment]}) 
+        })
         .catch((err) => {
             console.log(err)
+            setErr("Something went wrong, please try again!")
         })
-        })
+    }
+
 
     useEffect(() => {
       getComments(id).then((comments) => {
             setComments(comments)
             setIsLoading(false)
         })
-    }, []) 
+    }, [comments]) 
 
     if(isLoading) return <p>Loading...</p>
     
@@ -39,7 +44,8 @@ const CommentContainer= () => {
             <ul className='comment-grid'>
                 <CommentCard comments={comments} setComments={setComments}/>
             </ul>
-            <form onSubmit={handleSubmit}>
+        {err && <div className="error">{err}</div>}
+            <form className='post-comment'onSubmit={handleSubmit}>
                 <ul>
                     <li>
                         <label htmlFor='body'>New Comment:</label>
@@ -50,7 +56,6 @@ const CommentContainer= () => {
                             <button type='submit'>Post Comment</button>
                        </li>
                 </ul>
-
             </form>
         </div>
     )
