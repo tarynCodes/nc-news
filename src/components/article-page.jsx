@@ -27,18 +27,17 @@ const ArticlePage = ({comments, setComments}) => {
           })
     }
 
-
     if(isLoading) return <p>Loading...</p>
     
     return (
         <div>
-           {err ? <p>{err}</p> : null}
         <article className="single-Article-page">
         <h1 id="article-heading">{singleArticle.article.title}</h1>
         <h2 id="article-author">{singleArticle.article.author}</h2>
         <img id= "article-image" src={singleArticle.article.article_img_url}/>
         <p id="article-body">{singleArticle.article.body}</p>
         <p id="article-votes">Votes: {votes}</p>
+            {err && <div className="error">{err}</div>}
         <button className="upvote" onClick={() => {
             handleVote(1)}}> <span>&#128420;  </span></button> 
         <button  className="downvote" onClick={() => {
