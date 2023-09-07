@@ -7,6 +7,7 @@ import './App.css'
 import ArticleContainer from './components/article.container'
 import ArticlePage from './components/article-page'
 import Users from './components/users'
+import ArticlesByTopic from './components/articles-by-topic'
 
 
 
@@ -20,6 +21,7 @@ function App() {
   <Route path="/" element={<ArticleContainer articles={articles} setArticles={setArticles}/>}/>
   <Route path="/article/:id" element= {<ArticlePage articles={articles} setArticles={setArticles}/>}/>
   <Route path= "/users" element= {<Users/>}/>
+  <Route path="/topics/:topic" element={<ArticlesByTopic articles={articles} setArticles={setArticles}/>}/>
   </Routes>
     </div>
   )

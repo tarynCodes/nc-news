@@ -1,8 +1,12 @@
 import axios from 'axios';
 
-const getArticles =() => {
+const getArticles =(topic) => {
     return axios
-      .get(`https://taryns-news.onrender.com/api/articles`)
+      .get(`https://taryns-news.onrender.com/api/articles`, {
+        params:{
+            topic: topic
+        }
+      })
       .then(( {data} ) => {
         return data.articles
 })
@@ -52,10 +56,6 @@ const getUsers = () => {
     })
 }
 
-// const getTopicArticles = () => {
-//     return axios 
-//     .get(``)
-//     .get(``)
-// }
+
 export {getArticles, retriveIndividualArticles, getComments, patchVotes, postNewComment, getUsers};
 
