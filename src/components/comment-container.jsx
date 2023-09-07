@@ -19,10 +19,9 @@ const CommentContainer= () => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        postNewComment(id, postComment, user).then((newComment) => {
-            setComments((currComments) => {
-            return [...currComments, newComment]}) 
-        })
+        setComments((currComments) => {
+            return [{body:postComment, author:user, votes:0, created_at:"today"},...currComments]}) 
+         postNewComment(id, postComment, user)
         .catch((err) => {
             console.log(err)
             setErr("Something went wrong, please try again!")
@@ -35,7 +34,7 @@ const CommentContainer= () => {
             setComments(comments)
             setIsLoading(false)
         })
-    }, [comments]) 
+    }, []) 
 
     if(isLoading) return <p>Loading...</p>
     

@@ -52,5 +52,10 @@ const getUsers = () => {
     })
 }
 
+// const getTopicArticles = () => {
+//     return axios 
+//     .get(``)
+//     .get(``)
+// }
 export {getArticles, retriveIndividualArticles, getComments, patchVotes, postNewComment, getUsers};
 
