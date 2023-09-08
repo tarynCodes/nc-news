@@ -5,11 +5,9 @@ import {useParams} from "react-router-dom"
 
 const ArticlesByTopic = ({articles, setArticles}) => {
     const {topic} = useParams()
-    console.log("hello")
     const [isLoading, setIsLoading] = useState(true)
     useEffect(() => {
         getArticles(topic).then((article) => {
-            console.log(article)
             setArticles(article);
             setIsLoading(false)
         })
