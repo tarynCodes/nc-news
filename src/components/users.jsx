@@ -11,12 +11,12 @@ const Users = () => {
         })
     }, [])
 
-
 return users.map((user) => {
     return (
-        <div>
-            <h2>{user.username}</h2>
-            <img
+        <div className="user">
+            <h2>Click on me to login!</h2>
+            <h3>{user.username}</h3>
+            <img 
           onClick={() => {
             setUser(user.username);
           }}

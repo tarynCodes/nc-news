@@ -13,8 +13,8 @@ header{
     text-align: center;
     height: 25vh;
     font-size: 30px;
-    background-color:#335C67;
-    color:#FFF3B0;
+    background-color:#132a13;
+    color:#ecf39e;
 
 }
 
@@ -22,7 +22,7 @@ header{
     display:flex;
     flex-direction: row;
     justify-content: space-evenly;
-    background-color: #E09F3E;
+    background-color: #31572c;
     list-style: none;
     text-decoration: none;
     font-family: monospace;
@@ -31,7 +31,7 @@ header{
 
 .navbar li a{
     display: block;
-    color:#9E2A2B;
+    color:#ecf39e;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -47,7 +47,7 @@ header{
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #E09F3E;
+    background-color: #31572c;
     min-width: 160px;
     z-index: 1;
   }
@@ -56,11 +56,10 @@ header{
     display: block;
   }
 .article-grid{
-  background-color: #9E2A2B;
+  background-color: #90a955;
 }
 
 .article-card{
-    border-style: solid;
     flex-basis: calc(20% - 20px);
     width: 50%;
     height: 300px;
@@ -106,20 +105,20 @@ header{
     padding:1%;
     background-color: #FFF3B0;
     border-style: dashed;
-    border-color: #9E2A2B;
+    border-color: #90a955;
   }
 #article-heading{
   text-align: center;
   padding-top: 0%;
   padding-bottom: 2%;
   font-size: 28px;
-  color:#9E2A2B
+  color:#132a13
 }
 
  #article-author{
   text-align: center;
   padding-bottom: 2%;
-  color:#9E2A2B
+  color:#132a13
  }
 
 #article-image{
@@ -135,7 +134,7 @@ header{
   margin-right: 20%;
   margin-left: 20%;
   font-size: 20px;
-  color:#9E2A2B
+  color:#132a13
 }
  
 .comment-grid{
@@ -155,7 +154,7 @@ header{
   word-wrap: normal;
   overflow-wrap: normal;
   padding:1%;
-  background-color: #ffff;
+  background-color: #ecf39e;
   border-color: black;
   border-style: dashed;
   margin:5px;
@@ -186,7 +185,7 @@ span {
   font-size: 15px;
   margin-top: 6%;
   padding-top: 1%;
-  color:#9E2A2B;
+  color:#ecf39e;
   font-weight:bold;
   border-style: solid;
 }
@@ -209,6 +208,13 @@ margin-bottom: 2%;
   padding:3%
 }
 
+.user{
+  position: relative;
+  text-align: center;
+  direction: row;
+  padding:1%;
+
+}
 
   @media (max-width: 840px) {
     .article-card {
